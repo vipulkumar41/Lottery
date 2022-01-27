@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Lottery</title>
+</head>
+<body>
+    <script>
+        
+        
+        var trial = 1;
+        var temp=0;
+        while(trial <=9){
+            var a=prompt("Pick A Value ");
+            document.write("Ticket No. ",a);
+            document.write("<br>");
+            var randomnumber = Math.floor(Math.random() * (100) + 1);
+            document.write("Random No. ",randomnumber);
+            document.write("<br>");
+            if(temp===0){
+                if(a===randomnumber){
+                    document.write("Won the lottery\n");
+                    document.write("<br>");
+                    temp=1;
+                }
+                else{
+                    document.write("Lose the lottery\n");
+                    document.write("<br>");
+                    document.write("<br>");
+                }
+            }
+            else{
+                document.write("Lose the lottery\n");
+                document.write("<br><br>");
+            }
+            trial++;
+        }
+        if(trial===10 && temp===0){
+
+            var a=prompt("Pick A Value ");
+            document.write("<br>");
+
+            document.write("Ticket No. ",a);
+            document.write("<br>");
+            document.write("Random No. ",a);
+            document.write("<br>");
+            document.write("Won the lottery\n");
+        }
+        else{
+            
+            document.write("Lose the lottery\n");
+            document.write("<br>");
+        }
+    </script>
+</body>
+</html>
